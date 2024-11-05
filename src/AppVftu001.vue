@@ -77,8 +77,8 @@ export default {
           console.log("loadDataCategories: success",data);
           if(data.body) {
             for(let item of data.body) {
-              if(item.tablename && item.resultset && item.resultset.rows) {
-                this.dataChunk[item.tablename] = item.resultset.rows;
+              if(item.category && item.resultset && item.resultset.rows) {
+                this.dataChunk[item.category] = item.resultset.rows;
               }
             }
             console.log("data chunk",this.dataChunk);
